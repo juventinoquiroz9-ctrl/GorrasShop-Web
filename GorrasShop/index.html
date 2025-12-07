@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GorrasShop | Estilo Único desde Taxco</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">GorrasShop</div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#historia">Nuestra Historia</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#tallas">Guía de Tallas</a>
+            <a href="#proceso">Cómo Comprar</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="carousel" id="inicio">
+            <div class="slides">
+                <img src="images/gorra1.jpg" alt="Gorra Clásica Negra">
+                <img src="images/gorra2.jpg" alt="Gorra Azul Deportiva">
+                <img src="images/gorra3.jpg" alt="Gorra Blanca Casual">
+                <img src="images/gorra4.jpg" alt="Gorra Roja Urbana">
+            </div>
+            <div class="carousel-text">
+                <h1>GorrasShop: El Arte de la Gorra.</h1>
+                <p>Estilos únicos, materiales premium, la tradición de Taxco en cada diseño.</p>
+                <a href="#catalogo" class="btn-principal">Ver Catálogo</a>
+            </div>
+        </section>
+
+        <section id="historia" class="seccion-historia">
+            <h2>✨ Nuestra Historia: Desde la Joya Colonial de Taxco</h2>
+            <div class="historia-contenido">
+                <div class="historia-texto">
+                    <h3>Raíces en el Corazón de Guerrero</h3>
+                    <p>GorrasShop no es solo una tienda de gorras; es un homenaje a la autenticidad y el detalle. Fundada en la mágica ciudad colonial de **Taxco de Alarcón**, Guerrero, nuestra inspiración proviene de la rica herencia artesanal de la ciudad, famosa por la plata.</p>
+                    <p>Así como los plateros de Taxco forjan piezas únicas, nosotros seleccionamos gorras que son verdaderas obras de arte textil. **Cada gorra tiene su propia historia y estilo único**, elegida no por la marca, sino por su calidad, diseño y la capacidad de expresar tu personalidad.</p>
+                    <p class="cita">"No vendemos gorras, vendemos estilo y un pedazo de autenticidad."</p>
+                </div>
+                <div class="historia-imagen">
+                    <img src="images/taxco_inspiracion.jpg" alt="Inspiración en la arquitectura de Taxco">
+                </div>
+            </div>
+        </section>
+
+        <section id="catalogo" class="seccion-catalogo">
+            <h2>🧢 Catálogo de Estilos Únicos (30 Productos)</h2>
+            
+            <div class="filtros-container">
+                <div class="filtros">
+                    <label for="filtro-material">Material:</label>
+                    <select id="filtro-material" onchange="filtrarProductos()">
+                        <option value="todos">Todos</option>
+                        <option value="algodon">Algodón</option>
+                        <option value="malla">Trucker (Malla)</option>
+                        <option value="poliester">Poliéster</option>
+                    </select>
+                </div>
+                <div class="filtros">
+                    <label for="filtro-estilo">Estilo:</label>
+                    <select id="filtro-estilo" onchange="filtrarProductos()">
+                        <option value="todos">Todos</option>
+                        <option value="snapback">Snapback (Plana)</option>
+                        <option value="curva">Clásica (Curva)</option>
+                        <option value="trucker">Trucker</option>
+                        <option value="5panel">5-Panel</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="cards-container">
+                <h3>Clásicas Atemporales</h3>
+                <div class="seccion-grid">
+                    <div class="card" data-material="algodon" data-estilo="curva">
+                        <img src="images/gorra1.jpg" alt="Gorra Negra">
+                        <h3>Negra Premium</h3>
+                        <p><strong>Material:</strong> 100% Algodón.</p>
+                        <p><strong>Estilo:</strong> Curva/Ajustable.</p>
+                        <p><strong>Precio:</strong> $499 MXN</p>
+                        <button class="ver-btn" onclick="verProducto('Gorra Negra Premium', 'images/gorra1.jpg', '$499 MXN', 'algodon', 'curva', 'La gorra clásica por excelencia. Ideal para cualquier outfit, ofrece máxima comodidad y durabilidad gracias a su algodón premium.')">Ver Detalle</button>
+                    </div>
+                    <div class="card" data-material="algodon" data-estilo="curva">
+                        <img src="images/gorra3.jpg" alt="Gorra Blanca Casual">
+                        <h3>Blanca Minimal</h3>
+                        <p><strong>Material:</strong> 100% Algodón.</p>
+                        <p><strong>Estilo:</strong> Curva/Ajustable.</p>
+                        <p><strong>Precio:</strong> $420 MXN</p>
+                        <button class="ver-btn" onclick="verProducto('Gorra Blanca Minimal', 'images/gorra3.jpg', '$420 MXN', 'algodon', 'curva', 'Un diseño limpio y fresco para el verano. Corona suave y visera curva, perfecta para un look casual y minimalista.')">Ver Detalle</button>
+                    </div>
+                    <div class="card" data-material="algodon" data-estilo="curva"><img src="images/placeholder_curva1.jpg" alt="Gorra Roja Sólida"><h3>Roja Sólida</h3><p><strong>Material:</strong> 100% Algodón.</p><p><strong>Estilo:</strong> Curva/Ajustable.</p><p><strong>Precio:</strong> $450 MXN</p><button class="ver-btn" onclick="verProducto('Roja Sólida', 'images/placeholder_curva1.jpg', '$450 MXN', 'algodon', 'curva', 'Color vibrante y duradero. Estructura de seis paneles que asegura un ajuste perfecto y cómodo para el uso diario.')">Ver Detalle</button></div>
+                    <div class="card" data-material="algodon" data-estilo="curva"><img src="images/placeholder_curva2.jpg" alt="Gorra Verde Oliva"><h3>Verde Militar</h3><p><strong>Material:</strong> 100% Algodón.</p><p><strong>Estilo:</strong> Curva/Ajustable.</p><p><strong>Precio:</strong> $520 MXN</p><button class="ver-btn" onclick="verProducto('Verde Militar', 'images/placeholder_curva2.jpg', '$520 MXN', 'algodon', 'curva', 'Tono oliva de inspiración militar, ideal para un estilo urbano y rudo. Material resistente a la decoloración.')">Ver Detalle</button></div>
+                    <div class="card" data-material="algodon" data-estilo="curva"><img src="images/placeholder_curva3.jpg" alt="Gorra Gris Oscuro"><h3>Gris Carbón</h3><p><strong>Material:</strong> 100% Algodón.</p><p><strong>Estilo:</strong> Curva/Ajustable.</p><p><strong>Precio:</strong> $400 MXN</p><button class="ver-btn" onclick="verProducto('Gris Carbón', 'images/placeholder_curva3.jpg', '$400 MXN', 'algodon', 'curva', 'Un color neutro que combina con todo. Es ligera y cuenta con orificios de ventilación bordados.')">Ver Detalle</button></div>
+                    <div class="card" data-material="algodon" data-estilo="curva"><img src="images/placeholder_curva4.jpg" alt="Gorra Café Vintage"><h3>Café Vintage</h3><p><strong>Material:</strong> 100% Algodón.</p><p><strong>Estilo:</strong> Curva/Ajustable.</p><p><strong>Precio:</strong> $580 MXN</p><button class="ver-btn" onclick="verProducto('Café Vintage', 'images/placeholder_curva4.jpg', '$580 MXN', 'algodon', 'curva', 'Acabado desgastado tipo vintage en color café. Un look retro perfecto para amantes del estilo clásico americano.')">Ver Detalle</button></div>
+                    <div class="card" data-material="algodon" data-estilo="curva"><img src="images/placeholder_curva5.jpg" alt="Gorra Mostaza"><h3>Mostaza Verano</h3><p><strong>Material:</strong> 100% Algodón.</p><p><strong>Estilo:</strong> Curva/Ajustable.</p><p><strong>Precio:</strong> $410 MXN</p><button class="ver-btn" onclick="verProducto('Mostaza Verano', 'images/placeholder_curva5.jpg', '$410 MXN', 'algodon', 'curva', 'Un toque de color atrevido para tus días soleados. Hebilla de ajuste metálica de alta calidad.')">Ver Detalle</button></div>
+                    <div class="card" data-material="algodon" data-estilo="curva"><img src="images/placeholder_curva6.jpg" alt="Gorra Denim Claro"><h3>Denim Claro</h3><p><strong>Material:</strong> 100% Algodón.</p><p><strong>Estilo:</strong> Curva/Ajustable.</p><p><strong>Precio:</strong> $550 MXN</p><button class="ver-btn" onclick="verProducto('Denim Claro', 'images/placeholder_curva6.jpg', '$550 MXN', 'algodon', 'curva', 'Textura de mezclilla (denim) clara. Casual, moderna y muy cómoda, ideal para un estilo relajado.')">Ver Detalle</button></div>
+                    <div class="card" data-material="algodon" data-estilo="curva"><img src="images/placeholder_curva7.jpg" alt="Gorra Azul Rey"><h3>Azul Rey Básico</h3><p><strong>Material:</strong> 100% Algodón.</p><p><strong>Estilo:</strong> Curva/Ajustable.</p><p><strong>Precio:</strong> $399 MXN</p><button class="ver-btn" onclick="verProducto('Azul Rey Básico', 'images/placeholder_curva7.jpg', '$399 MXN', 'algodon', 'curva', 'Azul intenso que destaca. Un básico imprescindible para cualquier coleccionista de gorras de calidad.')">Ver Detalle</button></div>
+                    <div class="card" data-material="algodon" data-estilo="curva"><img src="images/placeholder_curva8.jpg" alt="Gorra Bordado Lateral"><h3>Bordado Lateral</h3><p><strong>Material:</strong> 100% Algodón.</p><p><strong>Estilo:</strong> Curva/Ajustable.</p><p><strong>Precio:</strong> $620 MXN</p><button class="ver-btn" onclick="verProducto('Bordado Lateral', 'images/placeholder_curva8.jpg', '$620 MXN', 'algodon', 'curva', 'Diseño exclusivo con un bordado sutil en el lateral. Un toque de elegancia y originalidad.')">Ver Detalle</button></div>
+                </div>
+
+                <h3>Ventilación y Estilo Trucker</h3>
+                <div class="seccion-grid">
+                    <div class="card" data-material="malla" data-estilo="trucker">
+                        <img src="images/gorra2.jpg" alt="Gorra Azul Deportiva">
+                        <h3>Azul Marino Mesh</h3>
+                        <p><strong>Material:</strong> Malla/Algodón.</p>
+                        <p><strong>Estilo:</strong> Trucker.</p>
+                        <p><strong>Precio:</strong> $350 MXN</p>
+                        <button class="ver-btn" onclick="verProducto('Azul Marino Mesh', 'images/gorra2.jpg', '$350 MXN', 'malla', 'trucker', 'La combinación perfecta de algodón en el frente y malla transpirable en la parte trasera. Ideal para días calurosos.')">Ver Detalle</button>
+                    </div>
+                    <div class="card" data-material="malla" data-estilo="trucker">
+                        <img src="images/gorra4.jpg" alt="Gorra Trucker Vintage">
+                        <h3>Trucker Vintage Roja</h3>
+                        <p><strong>Material:</strong> Malla/Algodón.</p>
+                        <p><strong>Estilo:</strong> Trucker.</p>
+                        <p><strong>Precio:</strong> $390 MXN</p>
+                        <button class="ver-btn" onclick="verProducto('Trucker Vintage Roja', 'images/gorra4.jpg', '$390 MXN', 'malla', 'trucker', 'Clásico estilo Trucker con un panel frontal de color rojo sólido. Perfecta para un look retro y desenfadado.')">Ver Detalle</button>
+                    </div>
+                    <div class="card" data-material="malla" data-estilo="trucker"><img src="images/placeholder_trucker1.jpg" alt="Trucker Negra/Blanca"><h3>Trucker Bicolor</h3><p><strong>Material:</strong> Malla/Algodón.</p><p><strong>Estilo:</strong> Trucker.</p><p><strong>Precio:</strong> $380 MXN</p><button class="ver-btn" onclick="verProducto('Trucker Bicolor', 'images/placeholder_trucker1.jpg', '$380 MXN', 'malla', 'trucker', 'Frente negro y malla blanca. Un diseño clásico que ofrece excelente ventilación y comodidad todo el día.')">Ver Detalle</button></div>
+                    <div class="card" data-material="malla" data-estilo="trucker"><img src="images/placeholder_trucker2.jpg" alt="Trucker Camuflaje"><h3>Trucker Camuflaje</h3><p><strong>Material:</strong> Malla/Poliéster.</p><p><strong>Estilo:</strong> Trucker.</p><p><strong>Precio:</strong> $490 MXN</p><button class="ver-btn" onclick="verProducto('Trucker Camuflaje', 'images/placeholder_trucker2.jpg', '$490 MXN', 'malla', 'trucker', 'Diseño de camuflaje en el frente y visera. Estructura firme y malla trasera para mayor durabilidad y estilo.')">Ver Detalle</button></div>
+                    <div class="card" data-material="malla" data-estilo="trucker"><img src="images/placeholder_trucker3.jpg" alt="Trucker Cítrica"><h3>Trucker Naranja</h3><p><strong>Material:</strong> Malla/Poliéster.</p><p><strong>Estilo:</strong> Trucker.</p><p><strong>Precio:</strong> $360 MXN</p><button class="ver-btn" onclick="verProducto('Trucker Naranja', 'images/placeholder_trucker3.jpg', '$360 MXN', 'malla', 'trucker', 'Color naranja brillante con malla blanca. Ideal para quienes buscan destacar y un accesorio lleno de energía.')">Ver Detalle</button></div>
+                    <div class="card" data-material="malla" data-estilo="trucker"><img src="images/placeholder_trucker4.jpg" alt="Trucker Logo Vintage"><h3>Logo Vintage</h3><p><strong>Material:</strong> Malla/Algodón.</p><p><strong>Estilo:</strong> Trucker.</p><p><strong>Precio:</strong> $450 MXN</p><button class="ver-btn" onclick="verProducto('Logo Vintage', 'images/placeholder_trucker4.jpg', '$450 MXN', 'malla', 'trucker', 'Parche frontal con logo vintage. Diseño de gran calidad, ideal para un look atemporal.')">Ver Detalle</button></div>
+                    <div class="card" data-material="malla" data-estilo="trucker"><img src="images/placeholder_trucker5.jpg" alt="Trucker Pescador"><h3>Trucker Pescador</h3><p><strong>Material:</strong> Malla/Lona.</p><p><strong>Estilo:</strong> Trucker.</p><p><strong>Precio:</strong> $420 MXN</p><button class="ver-btn" onclick="verProducto('Trucker Pescador', 'images/placeholder_trucker5.jpg', '$420 MXN', 'malla', 'trucker', 'Panel frontal de lona y malla rígida. Un estilo inspirado en el aire libre con ajuste snapback.')">Ver Detalle</button></div>
+                    <div class="card" data-material="malla" data-estilo="trucker"><img src="images/placeholder_trucker6.jpg" alt="Trucker Full Black"><h3>Trucker Total Black</h3><p><strong>Material:</strong> Malla/Algodón.</p><p><strong>Estilo:</strong> Trucker.</p><p><strong>Precio:</strong> $400 MXN</p><button class="ver-btn" onclick="verProducto('Trucker Total Black', 'images/placeholder_trucker6.jpg', '$400 MXN', 'malla', 'trucker', 'Completamente negra, ideal para un estilo discreto y elegante. Máxima transpirabilidad sin perder la forma.')">Ver Detalle</button></div>
+                    <div class="card" data-material="malla" data-estilo="trucker"><img src="images/placeholder_trucker7.jpg" alt="Trucker Logo Surf"><h3>Trucker Surf</h3><p><strong>Material:</strong> Malla/Poliéster.</p><p><strong>Estilo:</strong> Trucker.</p><p><strong>Precio:</strong> $480 MXN</p><button class="ver-btn" onclick="verProducto('Trucker Surf', 'images/placeholder_trucker7.jpg', '$480 MXN', 'malla', 'trucker', 'Gráfico frontal inspirado en el surf y la playa. Perfecta para un estilo costero y aventurero.')">Ver Detalle</button></div>
+                    <div class="card" data-material="malla" data-estilo="trucker"><img src="images/placeholder_trucker8.jpg" alt="Trucker Doble Tono"><h3>Trucker Doble Tono</h3><p><strong>Material:</strong> Malla/Algodón.</p><p><strong>Estilo:</strong> Trucker.</p><p><strong>Precio:</strong> $370 MXN</p><button class="ver-btn" onclick="verProducto('Trucker Doble Tono', 'images/placeholder_trucker8.jpg', '$370 MXN', 'malla', 'trucker', 'Visera de color contrastante con el panel frontal. Combina dos tonos de forma sutil y moderna.')">Ver Detalle</button></div>
+                </div>
+
+                <h3>Diseños Urbanos y Especiales</h3>
+                <div class="seccion-grid">
+                    <div class="card" data-material="poliester" data-estilo="snapback">
+                        <img src="images/placeholder_snapback1.jpg" alt="Gorra Snapback Grafiti">
+                        <h3>Snapback Grafiti</h3>
+                        <p><strong>Material:</strong> Poliéster/Acrílico.</p>
+                        <p><strong>Estilo:</strong> Snapback/Plana.</p>
+                        <p><strong>Precio:</strong> $599 MXN</p>
+                        <button class="ver-btn" onclick="verProducto('Snapback Grafiti', 'images/placeholder_snapback1.jpg', '$599 MXN', 'poliester', 'snapback', 'Visera plana y ajuste snapback. Diseño urbano con un gráfico tipo grafiti. Material resistente y ligero.')">Ver Detalle</button>
+                    </div>
+                    <div class="card" data-material="algodon" data-estilo="5panel">
+                        <img src="images/placeholder_5panel1.jpg" alt="Gorra 5-Panel Piel">
+                        <h3>5-Panel Texturizada</h3>
+                        <p><strong>Material:</strong> Algodón/Piel sintética.</p>
+                        <p><strong>Estilo:</strong> 5-Panel.</p>
+                        <p><strong>Precio:</strong> $650 MXN</p>
+                        <button class="ver-btn" onclick="verProducto('5-Panel Texturizada', 'images/placeholder_5panel1.jpg', '$650 MXN', 'algodon', '5panel', 'Construcción moderna de 5 paneles con detalle de textura de piel en la visera. El pináculo del estilo streetwear.')">Ver Detalle</button>
+                    </div>
+                    <div class="card" data-material="poliester" data-estilo="snapback"><img src="images/placeholder_snapback2.jpg" alt="Snapback Logo Neón"><h3>Snapback Neón</h3><p><strong>Material:</strong> Poliéster.</p><p><strong>Estilo:</strong> Snapback/Plana.</p><p><strong>Precio:</strong> $550 MXN</p><button class="ver-btn" onclick="verProducto('Snapback Neón', 'images/placeholder_snapback2.jpg', '$550 MXN', 'poliester', 'snapback', 'Bordado en colores neón sobre base negra. Un estilo audaz para quienes gustan de llamar la atención en la noche.')">Ver Detalle</button></div>
+                    <div class="card" data-material="algodon" data-estilo="5panel"><img src="images/placeholder_5panel2.jpg" alt="5-Panel Rayas"><h3>5-Panel Rayas</h3><p><strong>Material:</strong> 100% Algodón.</p><p><strong>Estilo:</strong> 5-Panel.</p><p><strong>Precio:</strong> $480 MXN</p><button class="ver-btn" onclick="verProducto('5-Panel Rayas', 'images/placeholder_5panel2.jpg', '$480 MXN', 'algodon', '5panel', 'Patrón de rayas sutiles. La gorra 5-panel es más corta y ajustada, perfecta para un look skater o hípster.')">Ver Detalle</button></div>
+                    <div class="card" data-material="poliester" data-estilo="snapback"><img src="images/placeholder_snapback3.jpg" alt="Snapback Metálica"><h3>Snapback Metálica</h3><p><strong>Material:</strong> Poliéster.</p><p><strong>Estilo:</strong> Snapback/Plana.</p><p><strong>Precio:</strong> $620 MXN</p><button class="ver-btn" onclick="verProducto('Snapback Metálica', 'images/placeholder_snapback3.jpg', '$620 MXN', 'poliester', 'snapback', 'Logo bordado con hilo metálico o un detalle en la visera. Lujo y distinción en un estilo urbano.')">Ver Detalle</button></div>
+                    <div class="card" data-material="algodon" data-estilo="5panel"><img src="images/placeholder_5panel3.jpg" alt="5-Panel Full Print"><h3>5-Panel Full Print</h3><p><strong>Material:</strong> 100% Algodón.</p><p><strong>Estilo:</strong> 5-Panel.</p><p><strong>Precio:</strong> $510 MXN</p><button class="ver-btn" onclick="verProducto('5-Panel Full Print', 'images/placeholder_5panel3.jpg', '$510 MXN', 'algodon', '5panel', 'Estampado completo con patrones geométricos o abstractos. Un diseño arriesgado que marca tendencia.')">Ver Detalle</button></div>
+                    <div class="card" data-material="poliester" data-estilo="snapback"><img src="images/placeholder_snapback4.jpg" alt="Snapback Tejido"><h3>Snapback Tejido</h3><p><strong>Material:</strong> Poliéster.</p><p><strong>Estilo:</strong> Snapback/Plana.</p><p><strong>Precio:</strong> $600 MXN</p><button class="ver-btn" onclick="verProducto('Snapback Tejido', 'images/placeholder_snapback4.jpg', '$600 MXN', 'poliester', 'snapback', 'Corona con textura tejida (knit) en el frente. Un estilo premium que ofrece una sensación de mayor calidad.')">Ver Detalle</button></div>
+                    <div class="card" data-material="algodon" data-estilo="5panel"><img src="images/placeholder_5panel4.jpg" alt="5-Panel Bordado Minimalista"><h3>5-Panel Bordado</h3><p><strong>Material:</strong> 100% Algodón.</p><p><strong>Estilo:</strong> 5-Panel.</p><p><strong>Precio:</strong> $540 MXN</p><button class="ver-btn" onclick="verProducto('5-Panel Bordado', 'images/placeholder_5panel4.jpg', '$540 MXN', 'algodon', '5panel', 'Diseño minimalista con un pequeño bordado frontal. Ligeramente menos estructurada que la snapback tradicional.')">Ver Detalle</button></div>
+                    <div class="card" data-material="poliester" data-estilo="snapback"><img src="images/placeholder_snapback5.jpg" alt="Snapback Deportiva"><h3>Snapback Deportiva</h3><p><strong>Material:</strong> Poliéster.</p><p><strong>Estilo:</strong> Snapback/Plana.</p><p><strong>Precio:</strong> $500 MXN</p><button class="ver-btn" onclick="verProducto('Snapback Deportiva', 'images/placeholder_snapback5.jpg', '$500 MXN', 'poliester', 'snapback', 'Tejido técnico que absorbe la humedad. Ideal para actividades deportivas o para un estilo athleisure.')">Ver Detalle</button></div>
+                    <div class="card" data-material="algodon" data-estilo="5panel"><img src="images/placeholder_5panel5.jpg" alt="5-Panel Unicolor Lona"><h3>5-Panel Lona</h3><p><strong>Material:</strong> Lona de Algodón.</p><p><strong>Estilo:</strong> 5-Panel.</p><p><strong>Precio:</strong> $460 MXN</p><button class="ver-btn" onclick="verProducto('5-Panel Unicolor Lona', 'images/placeholder_5panel5.jpg', '$460 MXN', 'algodon', '5panel', 'Material de lona resistente con un acabado mate. Ofrece un look más robusto y casual.')">Ver Detalle</button></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="tallas">
+            <h2>Guía de Tallas 📏</h2>
+            <table>
+                <tr><th>Talla</th><th>Medida en cm</th><th>Equivalente</th></tr>
+                <tr><td>6 7/8</td><td>54.9 cm</td><td>Extra Pequeña</td></tr>
+                <tr><td>7</td><td>55.8 cm</td><td>Pequeña</td></tr>
+                <tr><td>7 1/8</td><td>56.8 cm</td><td>Pequeña/Mediana</td></tr>
+                <tr><td>7 1/4</td><td>57.7 cm</td><td>Mediana</td></tr>
+                <tr><td>7 3/8</td><td>58.7 cm</td><td>Mediana/Grande</td></tr>
+                <tr><td>7 1/2</td><td>59.6 cm</td><td>Grande</td></tr>
+                <tr><td>7 5/8</td><td>60.6 cm</td><td>Extra Grande</td></tr>
+                <tr><td>7 3/4</td><td>61.5 cm</td><td>XXL</td></tr>
+                <tr><td>7 7/8</td><td>62.5 cm</td><td>XXL</td></tr>
+                <tr><td>8</td><td>63.5 cm</td><td>XXXL</td></tr>
+            </table>
+            <p class="guia-texto">Para medir tu talla, usa una cinta métrica alrededor de la cabeza justo por encima de las orejas.</p>
+        </section>
+
+        <section id="proceso" class="seccion-proceso">
+            <h2>🛍️ Nuestro Proceso de Compra y Pago</h2>
+            <div class="proceso-container">
+                <div class="paso">
+                    <h3>1. Elige tu Gorra</h3>
+                    <p>Navega por nuestro catálogo, usa los filtros de Material y Estilo. Una vez que encuentres la gorra perfecta, haz clic en **"Ver Detalle"**.</p>
+                </div>
+                <div class="paso">
+                    <h3>2. Pide por WhatsApp</h3>
+                    <p>En la ventana de detalle, haz clic en el botón **"Pedir por WhatsApp"**. Se generará un mensaje automático con el nombre, talla, cantidad y precio total de la gorra.</p>
+                </div>
+                <div class="paso">
+                    <h3>3. Confirma tu Orden (Solo Local)</h3>
+                    <p>Recibirás confirmación de disponibilidad. Nuestro modelo de negocio actual se centra en **entregas personales en Taxco de Alarcón** para garantizar la calidad y satisfacción inmediata.</p>
+                </div>
+                <div class="paso">
+                    <h3>4. Pago Presencial y Entrega</h3>
+                    <p>Una vez acordado el punto de encuentro, el **pago se realiza en efectivo o transferencia al momento de la entrega** de tu gorra. ¡Rápido, seguro y personal!</p>
+                </div>
+            </div>
+            <a href="https://wa.me/527331006981?text=Hola,%20quisiera%20hacer%20una%20consulta%20sobre%20las%20gorras." target="_blank" class="whatsapp-btn">¡Comienza tu Pedido Aquí!</a>
+        </section>
+
+        <section id="reseñas" class="seccion-reseñas">
+            <h2>⭐️ Lo que Dicen Nuestros Clientes</h2>
+            <div class="reseñas-container">
+                <div class="reseña-card">
+                    <p class="calificacion">★★★★★</p>
+                    <p class="texto-reseña">"¡Totalmente confiables! La calidad de la gorra supera mis expectativas y la atención por WhatsApp es excelente. Me la entregaron en el punto acordado en Taxco y el pago en persona fue muy seguro."</p>
+                    <p class="cliente">- Karla M. (Guerrero)</p>
+                </div>
+                <div class="reseña-card">
+                    <p class="calificacion">★★★★★</p>
+                    <p class="texto-reseña">"La 'Gorra Deportiva Mesh' es perfecta para correr. El proceso de pedido por mensaje es súper ágil. Es bueno tener una tienda de gorras con tanta variedad y que sea 100% confiable y local."</p>
+                    <p class="cliente">- Luis G. (Taxco)</p>
+                </div>
+                <div class="reseña-card">
+                    <p class="calificacion">★★★★★</p>
+                    <p class="texto-reseña">"Encontré un estilo de 5-Panel que buscaba por meses. La honestidad al manejar el pago contra entrega da mucha tranquilidad. Una tienda profesional con gorras de estilo único."</p>
+                    <p class="cliente">- Sofía P. (Taxco)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion-contacto">
+            <h2>Contáctanos y Haz tu Pedido 💬</h2>
+            <p>Estamos listos para atenderte personalmente.</p>
+            <a href="https://wa.me/527331006981?text=Hola,%20quisiera%20hacer%20una%20consulta%20sobre%20las%20gorras." target="_blank" class="whatsapp-btn">
+                ¡Chatea con Nosotros por WhatsApp!
+            </a>
+            <p class="nota-contacto">📲 Teléfono de contacto: (733) 100-6981</p>
+        </section>
+
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            
+            <div class="modal-grid">
+                
+                <div class="modal-left">
+                    <img id="modal-img" src="" alt="Imagen del producto">
+                </div>
+
+                <div class="modal-right">
+                    
+                    <p id="modal-brand" class="modal-brand-label">GorrasShop</p>
+                    <h3 id="modal-nombre" class="modal-title"></h3>
+                    <p class="modal-style-info"><span id="modal-material"></span> <span id="modal-estilo"></span> Cerrada</p>
+                    
+                    <div class="modal-price-container">
+                        <p id="modal-precio" class="modal-price"></p>
+                        <span class="modal-iva-info">IVA incluido.</span>
+                    </div>
+
+                    <div class="modal-section-divider"></div>
+
+                    <div class="modal-tallas-container">
+                        <div class="tallas-header">
+                            <p class="modal-tallas-label">Talla</p>
+                            <a href="#tallas" class="modal-tallas-link" onclick="cerrarModal()">Guía de tallas</a>
+                        </div>
+                        
+                        <div class="modal-tallas-grid">
+                            <button class="talla-btn" data-talla="6 7/8">6 7/8</button>
+                            <button class="talla-btn" data-talla="7">7</button>
+                            <button class="talla-btn" data-talla="7 1/8">7 1/8</button>
+                            <button class="talla-btn" data-talla="7 1/4">7 1/4</button>
+                            <button class="talla-btn" data-talla="7 3/8">7 3/8</button>
+                            <button class="talla-btn" data-talla="7 1/2">7 1/2</button>
+                            <button class="talla-btn" data-talla="7 5/8">7 5/8</button>
+                            <button class="talla-btn" data-talla="7 3/4">7 3/4</button>
+                            <button class="talla-btn" data-talla="7 7/8">7 7/8</button>
+                            <button class="talla-btn" data-talla="8">8</button>
+                        </div>
+                    </div>
+
+                    <div class="modal-cantidad-container">
+                        <p class="modal-cantidad-label">Cantidad</p>
+                        <div class="modal-input-group">
+                            <button class="qty-btn minus" onclick="cambiarCantidad(-1)">-</button>
+                            <input type="text" value="1" id="qty-input" readonly class="qty-input">
+                            <button class="qty-btn plus" onclick="cambiarCantidad(1)">+</button>
+                        </div>
+                    </div>
+                    
+                    <button id="whatsappPedidoBtn" class="modal-add-to-cart-btn">SELECCIONA UNA TALLA</button>
+
+                    <div class="modal-section-divider"></div>
+
+                    <p id="modal-descripcion" class="modal-description"></p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h3 class="footer-logo">GorrasShop</h3>
+                <p class="footer-slogan">Estilo único, materiales premium, la tradición de Taxco en cada diseño. Calidad garantizada.</p>
+                <div class="social-icons">
+                    <span class="social-circle"></span>
+                    <span class="social-circle"></span>
+                    <span class="social-circle"></span>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#catalogo">Tienda</a></li>
+                    <li><a href="#historia">Acerca de</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p>Taxco de Alarcón, Guerrero</p>
+                <p>contacto@gorrashop.com</p>
+                <p>+52 (733) 100-6981</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 GorrasShop. Todos los derechos reservados.</p>
+            <div class="legal-links">
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
